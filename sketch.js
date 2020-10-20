@@ -37,9 +37,7 @@ function start_b1() {
   var b1 = select('#b1');
 
   if (song_b1.isPlaying() == false) {
-    song_b2.stop();
-    song_b3.stop();
-    song_b4.stop();
+
       song_b1.play();
       b1.addClass('red');
 
@@ -59,9 +57,7 @@ function start_b2() {
   var b2 = select('#b2');
 
   if (song_b2.isPlaying() == false) {
-      song_b1.stop();
-      song_b3.stop();
-      song_b4.stop();
+
       song_b2.play();
       b2.addClass('green');
 
@@ -80,9 +76,7 @@ function start_b3() {
   var b3 = select('#b3');
 
   if ( song_b3.isPlaying() == false) {
-      song_b2.stop();
-      song_b1.stop();
-      song_b4.stop();
+
       song_b3.play();
       b3.addClass('blue');
 
@@ -101,9 +95,7 @@ function start_b4() {
   var b4 = select('#b4');
 
   if (song_b4.isPlaying() == false) {
-      song_b2.stop();
-      song_b3.stop();
-      song_b1.stop();
+  
       song_b4.play();
       b4.addClass('yellow');
 
