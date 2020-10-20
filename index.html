@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0>
+    <style>
+     body {padding: 0; margin: 0;}
+
+
+
+     .general{
+       position: fixed;
+       transform: translate(-50%, -50%);
+       left: 50%;
+       top:50%;
+       width: 50vw;
+       height: 50vw;
+     }
+
+     .button{
+       position: absolute;
+       width:50%;
+       height: 50%;
+       background-color: lightgray;
+       border: 1px solid black;
+     }
+
+     .r1{ top:0px; }
+     .r2{ top:50%; }
+     .c1{ left:0px; }
+     .c2{ left:50%; }
+
+     .red{ background-color: lightgreen!important;}
+     .green{ background-color: orange!important;}
+     .blue{ background-color: blue!important;}
+     .yellow{ background-color: yellow!important;}
+
+     .reset{
+       position: fixed;
+       width:200px;
+       height: 30px;
+       background-color: red;
+       transform: translate(-50%, 0);
+       left:50%;
+       bottom: -20%;
+       text-align: center;
+     }
+
+     .play{
+       position: fixed;
+       width:200px;
+       height: 30px;
+       background-color: green;
+       transform: translate(-50%, 0);
+       left:50%;
+       bottom: -30%;
+       text-align: center;
+     }
+
+
+
+   @media screen and (min-width: 801px){
+
+        .general{
+          width: 50vh;
+          height: 50vh;
+        }
+
+      }
+
+
+   </style>
+    <script src="p5.min.js"></script>
+    <script src="p5.sound.min.js"></script>
+    <script src="sketch.js"></script>
+  </head>
+  <body>
+    <div id="general" class="general">
+      <div id="b1" class="button r1 c1"></div>
+      <div id="b2" class="button r1 c2"></div>
+      <div id="b3" class="button r2 c1"></div>
+      <div id="b4" class="button r2 c2"></div>
+      <div id="reset" class="reset">RESET</div>
+      <div id="play" class="play">PLAY</div>
+    </div>
+  </body>
+</html>
