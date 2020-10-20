@@ -36,12 +36,13 @@ function setup() {
 function start_b1() {
   var b1 = select('#b1');
 
-  if (song_b1.isPlaying() == false &&
-    song_b2.isPlaying() == false &&
-    song_b3.isPlaying() == false &&
-    song_b4.isPlaying() == false) {
+  if (song_b1.isPlaying() == false) {
+    song_b2.stop();
+    song_b3.stop();
+    song_b4.stop();
       song_b1.play();
       b1.addClass('red');
+
       if (counter == 2){
       counter ++;
     }
@@ -57,10 +58,10 @@ function start_b1() {
 function start_b2() {
   var b2 = select('#b2');
 
-  if (song_b1.isPlaying() == false &&
-    song_b2.isPlaying() == false &&
-    song_b3.isPlaying() == false &&
-    song_b4.isPlaying() == false) {
+  if (song_b2.isPlaying() == false) {
+      song_b1.stop();
+      song_b3.stop();
+      song_b4.stop();
       song_b2.play();
       b2.addClass('green');
 
@@ -78,10 +79,10 @@ function start_b2() {
 function start_b3() {
   var b3 = select('#b3');
 
-  if (song_b1.isPlaying() == false &&
-    song_b2.isPlaying() == false &&
-    song_b3.isPlaying() == false &&
-    song_b4.isPlaying() == false) {
+  if ( song_b3.isPlaying() == false) {
+      song_b2.stop();
+      song_b1.stop();
+      song_b4.stop();
       song_b3.play();
       b3.addClass('blue');
 
@@ -99,10 +100,10 @@ function start_b3() {
 function start_b4() {
   var b4 = select('#b4');
 
-  if (song_b1.isPlaying() == false &&
-    song_b2.isPlaying() == false &&
-    song_b3.isPlaying() == false &&
-    song_b4.isPlaying() == false) {
+  if (song_b4.isPlaying() == false) {
+      song_b2.stop();
+      song_b3.stop();
+      song_b1.stop();
       song_b4.play();
       b4.addClass('yellow');
 
@@ -136,17 +137,19 @@ function start_reset() {
   var b4 = select('#b4');
   b4.removeClass('yellow');
   song_b4.stop();
+
+  totalSong.stop();
 }
 
 function start_play(){
   if (counter == 4 &&
-    song_b1.isPlaying() == false &&
-    song_b2.isPlaying() == false &&
-    song_b3.isPlaying() == false &&
-    song_b4.isPlaying() == false &&
     totalSong.isPlaying() == false) {
 
       totalSong.play();
+      song_b1.stop();
+      song_b2.stop();
+      song_b3.stop();
+      song_b4.stop();
   }
   else{
     counter = 0;
